@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-vg-7yC">
+                                <rect key="frame" x="0.0" y="312" width="768" height="400"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="qG2-mt-7rq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDR-ti-Sqj">
+                                <rect key="frame" x="335.5" y="732" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xgK-dH-Z2Q"/>
+                                </constraints>
+                                <state key="normal" title="Choose Photo"/>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OuF-PC-H5e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whv-nX-Ptn">
+                                <rect key="frame" x="337" y="772" width="94" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bi2-f6-jd6"/>
+                                </constraints>
+                                <state key="normal" title="Upload Photo"/>
+                                <connections>
+                                    <action selector="uploadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmB-tk-Hfe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ye5-vg-7yC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="09D-FW-LJ7"/>
+                            <constraint firstItem="Ye5-vg-7yC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0kX-po-6oz"/>
+                            <constraint firstItem="whv-nX-Ptn" firstAttribute="top" secondItem="EDR-ti-Sqj" secondAttribute="bottom" constant="10" id="1Zc-jI-AaU"/>
+                            <constraint firstItem="EDR-ti-Sqj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="45h-gv-RbT"/>
+                            <constraint firstItem="Ye5-vg-7yC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R00-1E-jPb"/>
+                            <constraint firstItem="whv-nX-Ptn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjT-2b-jP2"/>
+                            <constraint firstItem="EDR-ti-Sqj" firstAttribute="top" secondItem="Ye5-vg-7yC" secondAttribute="bottom" constant="20" id="hfy-3P-88o"/>
+                            <constraint firstItem="Ye5-vg-7yC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="w0S-KV-HRf"/>
+                            <constraint firstItem="Ye5-vg-7yC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zcH-Ve-MGS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="EDR-ti-Sqj" id="1O4-ex-IvD"/>
+                        <outlet property="imageView" destination="Ye5-vg-7yC" id="xJ8-tg-mL9"/>
+                        <outlet property="uploadButton" destination="whv-nX-Ptn" id="orK-kg-Nr0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
